@@ -1,0 +1,26 @@
+---
+abstract: 'A List of Modules I Use Constantly'
+author:
+  - 'Chris Prather  C<< <chris@prahter.org> >>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.87'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Task-SDK-Perigrin
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Task::Kensho: 0
+  local::lib: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/perigrin/task-sdk-perigrin.git
+version: 0.01
