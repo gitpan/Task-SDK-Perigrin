@@ -1,6 +1,6 @@
 package Task::SDK::Perigrin;
 use strict;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 1;    # Magic true value required at end of module
 __END__
@@ -12,7 +12,7 @@ Task::SDK::Perigrin - A List of Modules I Use Constantly
 
 =head1 VERSION
 
-This document describes Task::SDK::Perigrin version 0.03
+This document describes Task::SDK::Perigrin version 0.05
 
 
 =head1 SYNOPSIS
@@ -31,6 +31,10 @@ standard toolkit.
 =head2 Module::Install::Repository
 
 =head2 Module::Install::AutoManifest
+
+=head2 Net::Hiveminder
+
+=head2 CPAN::Uploader
 
 =head1 BUGS AND LIMITATIONS
 

@@ -18,3 +18,4 @@ MANIFEST.SKIP
 META.yml
 pm_to_blib
 t/00.load.t
+Task-SDK-Perigrin-0.05.tar.gz

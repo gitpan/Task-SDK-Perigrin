@@ -8,7 +8,9 @@ all_from 'lib/Task/SDK/Perigrin.pm';
 # Specific dependencies
 requires 'Task::Kensho';
 requires 'Module::Install::Repository';
-requires 'Module::install::AutoManifest';
+requires 'Module::Install::AutoManifest';
+requires 'Net::Hiveminder';
+requires 'CPAN::Uploader';
 
 auto_set_repository;
 auto_manifest;

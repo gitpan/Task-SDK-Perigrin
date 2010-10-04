@@ -14,13 +14,13 @@
 #     ABSTRACT => q[A List of Modules I Use Constantly]
 #     AUTHOR => q[Chris Prather  C<< <chris@prahter.org> >>]
 #     BUILD_REQUIRES => { ExtUtils::MakeMaker=>q[6.42] }
-#     DIR => []
 #     DISTNAME => q[Task-SDK-Perigrin]
 #     LICENSE => q[perl]
 #     NAME => q[Task::SDK::Perigrin]
 #     NO_META => q[1]
-#     PREREQ_PM => { Task::Kensho=>q[0], ExtUtils::MakeMaker=>q[6.42], Module::install::AutoManifest=>q[0], Module::Install::Repository=>q[0] }
-#     VERSION => q[0.04]
+#     PREREQ_PM => { Net::Hiveminder=>q[0], Task::Kensho=>q[0], ExtUtils::MakeMaker=>q[6.42], CPAN::Uploader=>q[0], Module::Install::Repository=>q[0], Module::Install::AutoManifest=>q[0] }
+#     VERSION => q[0.05]
+#     VERSION_FROM => q[lib/Task/SDK/Perigrin.pm]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     realclean => { FILES=>q[MYMETA.yml] }
 
@@ -29,7 +29,7 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /Users/perigrin/.perlbrew/perls/perl-5.12.0/lib/5.12.0/darwin-2level/Config.pm).
+# These definitions are from config.sh (via /usr/local/perlbrew/perls/perl-5.12.2/lib/5.12.2/darwin-2level/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -46,10 +46,10 @@ LIBC = /usr/lib/libc.dylib
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = darwin
-OSVERS = 10.3.0
+OSVERS = 10.4.0
 RANLIB = ranlib
-SITELIBEXP = /Users/perigrin/.perlbrew/perls/perl-5.12.0/lib/site_perl/5.12.0
-SITEARCHEXP = /Users/perigrin/.perlbrew/perls/perl-5.12.0/lib/site_perl/5.12.0/darwin-2level
+SITELIBEXP = /usr/local/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2
+SITEARCHEXP = /usr/local/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2/darwin-2level
 SO = dylib
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -61,11 +61,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Task::SDK::Perigrin
 NAME_SYM = Task_SDK_Perigrin
-VERSION = 0.04
+VERSION = 0.05
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_04
+VERSION_SYM = 0_05
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.04
+XS_VERSION = 0.05
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -77,55 +77,57 @@ INST_MAN3DIR = blib/man3
 MAN1EXT = 1
 MAN3EXT = 3
 INSTALLDIRS = site
-INSTALL_BASE = /Users/perigrin/.perlbrew/perls/current
 DESTDIR = 
-PREFIX = $(INSTALL_BASE)
-INSTALLPRIVLIB = $(INSTALL_BASE)/lib/perl5
+PREFIX = $(SITEPREFIX)
+PERLPREFIX = /usr/local/perlbrew/perls/perl-5.12.2
+SITEPREFIX = /usr/local/perlbrew/perls/perl-5.12.2
+VENDORPREFIX = 
+INSTALLPRIVLIB = /usr/local/perlbrew/perls/perl-5.12.2/lib/5.12.2
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = $(INSTALL_BASE)/lib/perl5
+INSTALLSITELIB = /usr/local/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = $(INSTALL_BASE)/lib/perl5
+INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = $(INSTALL_BASE)/lib/perl5/darwin-2level
+INSTALLARCHLIB = /usr/local/perlbrew/perls/perl-5.12.2/lib/5.12.2/darwin-2level
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = $(INSTALL_BASE)/lib/perl5/darwin-2level
+INSTALLSITEARCH = /usr/local/perlbrew/perls/perl-5.12.2/lib/site_perl/5.12.2/darwin-2level
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = $(INSTALL_BASE)/lib/perl5/darwin-2level
+INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = $(INSTALL_BASE)/bin
+INSTALLBIN = /usr/local/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(INSTALL_BASE)/bin
+INSTALLSITEBIN = /usr/local/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = $(INSTALL_BASE)/bin
+INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = $(INSTALL_BASE)/bin
+INSTALLSCRIPT = /usr/local/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = $(INSTALL_BASE)/bin
+INSTALLSITESCRIPT = /usr/local/perlbrew/perls/perl-5.12.2/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = $(INSTALL_BASE)/bin
+INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLMAN1DIR = /usr/local/perlbrew/perls/perl-5.12.2/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLSITEMAN1DIR = /usr/local/perlbrew/perls/perl-5.12.2/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
-INSTALLVENDORMAN1DIR = $(INSTALL_BASE)/man/man1
+INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLMAN3DIR = /usr/local/perlbrew/perls/perl-5.12.2/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLSITEMAN3DIR = /usr/local/perlbrew/perls/perl-5.12.2/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
-INSTALLVENDORMAN3DIR = $(INSTALL_BASE)/man/man3
+INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /Users/perigrin/.perlbrew/perls/perl-5.12.0/lib/5.12.0/darwin-2level
+PERL_ARCHLIB = /usr/local/perlbrew/perls/perl-5.12.2/lib/5.12.2/darwin-2level
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /Users/perigrin/.perlbrew/perls/perl-5.12.0/lib/5.12.0/darwin-2level/CORE
-PERL = /Users/perigrin/.perlbrew/perls/current/bin/perl "-Iinc"
-FULLPERL = /Users/perigrin/.perlbrew/perls/current/bin/perl "-Iinc"
+PERL_INC = /usr/local/perlbrew/perls/perl-5.12.2/lib/5.12.2/darwin-2level/CORE
+PERL = /usr/local/perlbrew/bin/perl "-Iinc"
+FULLPERL = /usr/local/perlbrew/bin/perl "-Iinc"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -138,7 +140,7 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /Users/perigrin/.perlbrew/perls/perl-5.12.0/lib/5.12.0/ExtUtils/MakeMaker.pm
+MAKEMAKER   = /usr/local/perlbrew/perls/perl-5.12.2/lib/5.12.2/ExtUtils/MakeMaker.pm
 MM_VERSION  = 6.56
 MM_REVISION = 65600
 
@@ -151,7 +153,7 @@ FULLEXT = Task/SDK/Perigrin
 BASEEXT = Perigrin
 PARENT_NAME = Task::SDK
 DLBASE = $(BASEEXT)
-VERSION_FROM = 
+VERSION_FROM = lib/Task/SDK/Perigrin.pm
 OBJECT = 
 LDFROM = $(OBJECT)
 LINKTYPE = dynamic
@@ -257,7 +259,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Task-SDK-Perigrin
-DISTVNAME = Task-SDK-Perigrin-0.04
+DISTVNAME = Task-SDK-Perigrin-0.05
 
 
 # --- MakeMaker macro section:
@@ -282,8 +284,7 @@ DISTVNAME = Task-SDK-Perigrin-0.04
 
 PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 	LINKTYPE="$(LINKTYPE)"\
-	PREFIX="$(PREFIX)"\
-	INSTALL_BASE="$(INSTALL_BASE)"
+	PREFIX="$(PREFIX)"
 
 
 # --- MakeMaker special_targets section:
@@ -722,7 +723,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /Users/perigrin/.perlbrew/perls/current/bin/perl
+FULLPERL      = /usr/local/perlbrew/bin/perl
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -766,12 +767,14 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.04">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.05">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>A List of Modules I Use Constantly</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>Chris Prather  C&lt;&lt; &lt;chris@prahter.org&gt; &gt;&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="CPAN::Uploader" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Module::Install::AutoManifest" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Module::Install::Repository" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Module::install::AutoManifest" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Net::Hiveminder" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Task::Kensho" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-2level-5.12" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
@@ -794,7 +797,7 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 0.95
+# Postamble by Module::Install 1.00
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::
